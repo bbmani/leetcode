@@ -3,14 +3,11 @@ def smallerNumbersThanCurrent(nums):
     :type nums: List[int]
     :rtype: List[int]
     """
-    
-    final_list = list()
     # BASE CASE
     if len(set(nums)) == 1:
-        for i in range(len(nums)):
-            final_list.append(0)
-        return final_list
-    else:    
+        return [0 for i in range(len(nums))]
+    else:   
+        final_list = list()
         for num in nums:
             returnValue = 0
             returnValue += len([small for small in nums if small < num])
