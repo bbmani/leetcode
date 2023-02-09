@@ -18,8 +18,7 @@ def decodeMessage(key, message) -> str:
             final_string += " "
         else:
             final_string = final_string + "".join(encoder[x])
-            
-        
+
     return final_string
                
 def main():
