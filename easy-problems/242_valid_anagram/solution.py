@@ -1,13 +1,7 @@
 from collections import Counter
 
 def isAnagram(s, t):
-    if len(s) != len(t):
-        return False
-
-    s_counter = dict(sorted(Counter(s).items()))
-    t_counter = dict(sorted(Counter(t).items()))
-    
-    return s_counter == t_counter
+    return dict(sorted(Counter(s).items())) == dict(sorted(Counter(t).items()))
     
 
 def main():
